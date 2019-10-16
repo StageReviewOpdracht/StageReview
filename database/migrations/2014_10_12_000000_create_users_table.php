@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('student_number');
+            $table->string('student_number')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->string('password');
