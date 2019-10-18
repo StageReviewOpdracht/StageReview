@@ -68,107 +68,36 @@
   </nav>
 
   <!-- Header -->
-  <header class="masthead">
+  <!-- <header class="masthead">
     <div class="container">
       <div class="intro-text">
         <div class="intro-heading text-uppercase">Welcome To Our Website!</div>
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
       </div>
     </div>
-  </header>
+  </header> -->
 
   <!-- Services -->
   <section class="page-section" id="services">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Companys's</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Companys</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">BedrijfsNaam</h4>
-          <p class="text-muted">Locatie: Dordrecht Romboutslaan 44</p>
-          <p class="text-muted">Beschikbaarheid:<br>Leerplaats beschikbaar</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">BedrijfsNaam</h4>
-          <p class="text-muted">Locatie: Dordrecht Romboutslaan 44</p>
-          <p class="text-muted">Beschikbaarheid:<br>Leerplaats beschikbaar</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">BedrijfsNaam</h4>
-          <p class="text-muted">Locatie: Dordrecht Romboutslaan 44</p>
-          <p class="text-muted">Beschikbaarheid:<br>Leerplaats beschikbaar</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">BedrijfsNaam</h4>
-          <p class="text-muted">Locatie: Dordrecht Romboutslaan 44</p>
-          <p class="text-muted">Beschikbaarheid:<br>Leerplaats beschikbaar</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">BedrijfsNaam</h4>
-          <p class="text-muted">Locatie: Dordrecht Romboutslaan 44</p>
-          <p class="text-muted">Beschikbaarheid:<br>Leerplaats beschikbaar</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">BedrijfsNaam</h4>
-          <p class="text-muted">Locatie: Dordrecht Romboutslaan 44</p>
-          <p class="text-muted">Beschikbaarheid:<br>Leerplaats beschikbaar</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">BedrijfsNaam</h4>
-          <p class="text-muted">Locatie: Dordrecht Romboutslaan 44</p>
-          <p class="text-muted">Beschikbaarheid:<br>Leerplaats beschikbaar</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">BedrijfsNaam</h4>
-          <p class="text-muted">Locatie: Dordrecht Romboutslaan 44</p>
-          <p class="text-muted">Beschikbaarheid:<br>Leerplaats beschikbaar</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">BedrijfsNaam</h4>
-          <p class="text-muted">Locatie: Dordrecht Romboutslaan 44</p>
-          <p class="text-muted">Beschikbaarheid:<br>Leerplaats beschikbaar</p>
 
-        </div>
+      <!-- {{ $company}} -->
+
+        @foreach ($company as $item)
+          <div class="col-md-4">
+            <h3>{{$item->name}}<h3>
+            <h4>Location: {{$item->location}}</h4>     
+          </div>        
+        @endforeach
+
+        <span>{{$company->links()}}</span>
       </div>
     </div>
   </section>
