@@ -7,21 +7,15 @@ use Illuminate\Support\Facades\DB;
 
 class CompanyController extends Controller
 {
-<<<<<<< HEAD
-    //
-    function index (){
+    function index(){
         $company = DB::table('company')->paginate(9);
         return view('index',['company'=>$company]);
-=======
+    }    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -87,6 +81,6 @@ class CompanyController extends Controller
     public function destroy($id)
     {
         //
->>>>>>> dcf14f520bf2d51b721574ebff26308a060bb9f0
+    
     }
 }
